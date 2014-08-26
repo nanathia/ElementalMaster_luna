@@ -19,7 +19,7 @@ class GameMain : public cocos2d::Layer {
     PlayStage* m_currentScene;
     // テクスチャ管理クラス。
     TextureManager* m_TexMan;
-    // ルナちゃん
+    // ルナ
     CPlayerLuna* m_Luna;
     // メニュー画面
     cocos2d::Sprite* m_Menu;
@@ -27,7 +27,7 @@ class GameMain : public cocos2d::Layer {
     cocos2d::Sprite* m_StatusUi;
 public:
     // 画像を列挙型でナンバリング。std::mapのキーとして使用。
-    // 同時に、z-orderとして使用。
+    // 同時に、z-orderとして使用する。
     enum texName{
         texName_StageBGI,
         texName_StatusUI,

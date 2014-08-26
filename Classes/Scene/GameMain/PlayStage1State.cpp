@@ -1,13 +1,6 @@
-//
-//  PlayStage1State.cpp
-//  Stg14
-//
-//  Created by 小林　伸 on 2014/08/25.
-//
-//
-
 #include "PlayStage1State.h"
 #include "StandingLunaImage.h"
+#include "StageStartEffect.h"
 #include "MessageWindow.h"
 
 
@@ -15,7 +8,7 @@ namespace stage1{
     
     State::State(PlayStage1* user):
     m_child(0){
-        m_child = new SpeakScene1(user);
+        m_child = new ReadyScene(user);//SpeakScene1(user);
     }
     State::~State(){
         delete m_child;
@@ -29,12 +22,31 @@ namespace stage1{
         }
     }
     
+
     StateChild::StateChild(PlayStage1*user):
     m_user(user){
     }
     StateChild::~StateChild(){
     }
-    
+	
+#pragma mark --- ステージ開始処理 ---
+	ReadyScene::ReadyScene(PlayStage1* user):
+    StateChild(user),
+	m_startEffect(0){
+		m_startEffect = new StageStartEffect;
+	}
+    ReadyScene::~ReadyScene(){
+		delete m_startEffect;
+		m_startEffect = 0;
+	}
+    StateChild* ReadyScene::update(float deltaTime){
+        StateChild* next = this;
+		m_startEffect->update(deltaTime);
+	
+		return next;
+	}
+	
+#pragma mark --- ルナの会話処理 ---
     SpeakScene1::SpeakScene1(PlayStage1* user):
     StateChild(user),
     m_Tatie(0),
@@ -54,6 +66,8 @@ namespace stage1{
         m_messageWindow->update(deltaTime);
         return next;
     }
+	
+#pragma mark --- 自由行動 ---
     FirstFreeMove_Scene::FirstFreeMove_Scene(PlayStage1* user):
     StateChild(user){
     }
@@ -63,6 +77,8 @@ namespace stage1{
         StateChild* next = this;
         return next;
     }
+	
+#pragma mark --- 自由落下 ---
     FallAndFight_Scene::FallAndFight_Scene(PlayStage1* user):
     StateChild(user){
     }
@@ -72,6 +88,8 @@ namespace stage1{
         StateChild* next = this;
         return next;
     }
+	
+#pragma mark --- 着地 ---
     Grounding_Scene::Grounding_Scene(PlayStage1* user):
     StateChild(user){
     }
@@ -81,6 +99,8 @@ namespace stage1{
         StateChild* next = this;
         return next;
     }
+	
+#pragma mark --- ボス戦 ---
     BossFight_Scene::BossFight_Scene(PlayStage1* user):
     StateChild(user){
     }

@@ -31,13 +31,12 @@ void WindowState::update(double deltaTime){
 WindowStateChild::WindowStateChild(WindowConsole*user):
 m_user(user)
 {
+	
 }
 
 // デストラクタ
 WindowStateChild::~WindowStateChild(){
 }
-
-////////////////////////////////////////////////////////////////////
 
 #pragma mark --- WindowOff 定義 ---
 /// 徐々に
@@ -62,18 +61,12 @@ WindowStateChild* WindowOff::update(double deltaTime){
 
 
 #pragma mark --- WindowAppear 定義 ---
-// コンストラクタ
 WindowAppear::WindowAppear(WindowConsole* user):
 WindowStateChild(user),
 m_time(0){
 	user->getMessageWindow()->getSprite()->setVisible(true);
 	user->getNameWindow()->getSprite()->setVisible(true);
-	
-	DelayTime* delay = DelayTime::create(2);
-	ActionInterval* actionLuna = MoveTo::create(1.5f, Point(760.0f, 240.0f));
-	Sequence* sequence = Sequence::create(delay, actionLuna, NULL);
 }
-// デストラクタ
 WindowAppear::~WindowAppear(){
 }
 
@@ -94,6 +87,7 @@ WindowStateChild* WindowAppear::update(double deltaTime){
 // コンストラクタ
 WindowOn::WindowOn(WindowConsole* user):
 WindowStateChild(user){
+	user->nextLabel("文字表示！・ｗ・");
 }
 // デストラクタ
 WindowOn::~WindowOn(){
@@ -122,7 +116,6 @@ WindowStateChild* WindowDisappear::update(double deltaTime){
     if(m_time >= 1){
         m_time = 1;
     }
-	
 	
     m_user->getMessageWindow()->setScale((1-m_time)*127);	
 	if(m_time >= 1)
