@@ -19,6 +19,10 @@
 		047E749F19ABAA9D002B9FF8 /* StandingLunaImage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 047E749C19ABAA9D002B9FF8 /* StandingLunaImage.cpp */; };
 		047E74A319ABAFC2002B9FF8 /* StandingLunaImageState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 047E74A119ABAFC2002B9FF8 /* StandingLunaImageState.cpp */; };
 		047E74A419ABAFC2002B9FF8 /* StandingLunaImageState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 047E74A119ABAFC2002B9FF8 /* StandingLunaImageState.cpp */; };
+		04AB44F019AD72B000BE0052 /* StageStartEffectCharacter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04AB44EE19AD72B000BE0052 /* StageStartEffectCharacter.cpp */; };
+		04AB44F719AD770800BE0052 /* StageStartEffectCharacterState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04AB44F519AD770800BE0052 /* StageStartEffectCharacterState.cpp */; };
+		04AB44F819AD86B100BE0052 /* StageStartEffectCharacter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04AB44EE19AD72B000BE0052 /* StageStartEffectCharacter.cpp */; };
+		04AB44F919AD86B400BE0052 /* StageStartEffectCharacterState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04AB44F519AD770800BE0052 /* StageStartEffectCharacterState.cpp */; };
 		1AC6FB1F180E996B004C840B /* libbox2d Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FAFF180E9839004C840B /* libbox2d Mac.a */; };
 		1AC6FB20180E996B004C840B /* libchipmunk Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FAFD180E9839004C840B /* libchipmunk Mac.a */; };
 		1AC6FB21180E996B004C840B /* libcocos2dx Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FAF9180E9839004C840B /* libcocos2dx Mac.a */; };
@@ -367,6 +371,10 @@
 		047E749D19ABAA9D002B9FF8 /* StandingLunaImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StandingLunaImage.h; path = ../Classes/StandingLunaImage.h; sourceTree = "<group>"; };
 		047E74A119ABAFC2002B9FF8 /* StandingLunaImageState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = StandingLunaImageState.cpp; path = ../Classes/StandingLunaImageState.cpp; sourceTree = "<group>"; };
 		047E74A219ABAFC2002B9FF8 /* StandingLunaImageState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StandingLunaImageState.h; path = ../Classes/StandingLunaImageState.h; sourceTree = "<group>"; };
+		04AB44EE19AD72B000BE0052 /* StageStartEffectCharacter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StageStartEffectCharacter.cpp; sourceTree = "<group>"; };
+		04AB44EF19AD72B000BE0052 /* StageStartEffectCharacter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StageStartEffectCharacter.h; sourceTree = "<group>"; };
+		04AB44F519AD770800BE0052 /* StageStartEffectCharacterState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StageStartEffectCharacterState.cpp; sourceTree = "<group>"; };
+		04AB44F619AD770800BE0052 /* StageStartEffectCharacterState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StageStartEffectCharacterState.h; sourceTree = "<group>"; };
 		1AC6FAE5180E9839004C840B /* cocos2d_libs.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = cocos2d_libs.xcodeproj; path = ../cocos2d/build/cocos2d_libs.xcodeproj; sourceTree = "<group>"; };
 		1ACB3243164770DE00914215 /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcurl.a; path = ../../cocos2dx/platform/third_party/ios/libraries/libcurl.a; sourceTree = "<group>"; };
 		1AFAF8B316D35DE700DB1158 /* AppDelegate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AppDelegate.cpp; path = ../Classes/AppDelegate.cpp; sourceTree = "<group>"; };
@@ -569,10 +577,9 @@
 		047E748C19AB75A7002B9FF8 /* stage */ = {
 			isa = PBXGroup;
 			children = (
+				04AB44E519AD725900BE0052 /* starteffect */,
 				047E748819AB759F002B9FF8 /* PlayStage.cpp */,
 				047E748919AB759F002B9FF8 /* PlayStage.h */,
-				5BD665A819ACEF9700C731A4 /* StageStartEffect.cpp */,
-				5BD665A919ACEF9700C731A4 /* StageStartEffect.h */,
 				047E748619AB7519002B9FF8 /* stage1 */,
 			);
 			name = stage;
@@ -611,6 +618,43 @@
 			children = (
 				047E74A119ABAFC2002B9FF8 /* StandingLunaImageState.cpp */,
 				047E74A219ABAFC2002B9FF8 /* StandingLunaImageState.h */,
+			);
+			name = state;
+			sourceTree = "<group>";
+		};
+		04AB44E519AD725900BE0052 /* starteffect */ = {
+			isa = PBXGroup;
+			children = (
+				04AB44ED19AD729E00BE0052 /* child */,
+				04AB44EC19AD728C00BE0052 /* parent */,
+			);
+			name = starteffect;
+			sourceTree = "<group>";
+		};
+		04AB44EC19AD728C00BE0052 /* parent */ = {
+			isa = PBXGroup;
+			children = (
+				5BD665A819ACEF9700C731A4 /* StageStartEffect.cpp */,
+				5BD665A919ACEF9700C731A4 /* StageStartEffect.h */,
+			);
+			name = parent;
+			sourceTree = "<group>";
+		};
+		04AB44ED19AD729E00BE0052 /* child */ = {
+			isa = PBXGroup;
+			children = (
+				04AB44F119AD759F00BE0052 /* state */,
+			);
+			name = child;
+			sourceTree = "<group>";
+		};
+		04AB44F119AD759F00BE0052 /* state */ = {
+			isa = PBXGroup;
+			children = (
+				04AB44F619AD770800BE0052 /* StageStartEffectCharacterState.h */,
+				04AB44F519AD770800BE0052 /* StageStartEffectCharacterState.cpp */,
+				04AB44EF19AD72B000BE0052 /* StageStartEffectCharacter.h */,
+				04AB44EE19AD72B000BE0052 /* StageStartEffectCharacter.cpp */,
 			);
 			name = state;
 			sourceTree = "<group>";
@@ -1246,6 +1290,8 @@
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				047E748A19AB759F002B9FF8 /* PlayStage.cpp in Sources */,
 				BA5FD39E18F4980800EDAC79 /* InputManager.cpp in Sources */,
+				04AB44F019AD72B000BE0052 /* StageStartEffectCharacter.cpp in Sources */,
+				04AB44F719AD770800BE0052 /* StageStartEffectCharacterState.cpp in Sources */,
 				047E74A319ABAFC2002B9FF8 /* StandingLunaImageState.cpp in Sources */,
 				BAE3AC9818F0CE51007F758A /* GameMain.cpp in Sources */,
 				5B36260719AAC01C00A6B3E0 /* LunaState.cpp in Sources */,
@@ -1272,8 +1318,10 @@
 				5B7F21E919A4EBA600148ACA /* WindowState.cpp in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
 				5BD665AB19ACEF9700C731A4 /* StageStartEffect.cpp in Sources */,
+				04AB44F819AD86B100BE0052 /* StageStartEffectCharacter.cpp in Sources */,
 				5B36260819AAC01C00A6B3E0 /* LunaState.cpp in Sources */,
 				047E748B19AB759F002B9FF8 /* PlayStage.cpp in Sources */,
+				04AB44F919AD86B400BE0052 /* StageStartEffectCharacterState.cpp in Sources */,
 				047E749A19AB83EF002B9FF8 /* TextureManager.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

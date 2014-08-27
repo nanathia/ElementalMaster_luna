@@ -2,27 +2,20 @@
 #define __Stg14__StageStartEffect__
 
 #include "cocos2d.h"
+#include <list>
 
+class StageStartEffectCharacter;
 
 class StageStartEffect{
-	cocos2d::Sprite* m_spriteR;
-	cocos2d::Sprite* m_spriteE;
-	cocos2d::Sprite* m_spriteA;
-	cocos2d::Sprite* m_spriteD;
-	cocos2d::Sprite* m_spriteY;
-	int m_waitCounter;
-	
+    std::list<StageStartEffectCharacter*> m_data;
+    bool isAllCharacterAppeared() const;
+    void allCharacterRetire();
 public:
 	StageStartEffect();
 	~StageStartEffect();
-	
-	void interAction();
-	void outerAction();
-	
 public:
 	void update(double deltaTime);
-	cocos2d::Sprite* getSprite(char chara);
-	void waitCounterIncrease();
+    bool isEnd() const;
 };
 
 #endif /* defined(__Stg14__StageStartEffect__) */
