@@ -166,6 +166,8 @@
 		5BD08598198F949800A48E08 /* shootingBlaze.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5BD08596198F949800A48E08 /* shootingBlaze.wav */; };
 		5BD0859A198F94AA00A48E08 /* shootingBlaze.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BD08599198F94AA00A48E08 /* shootingBlaze.png */; };
 		5BD0859B198F94AA00A48E08 /* shootingBlaze.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BD08599198F94AA00A48E08 /* shootingBlaze.png */; };
+		5BD665AA19ACEF9700C731A4 /* StageStartEffect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5BD665A819ACEF9700C731A4 /* StageStartEffect.cpp */; };
+		5BD665AB19ACEF9700C731A4 /* StageStartEffect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5BD665A819ACEF9700C731A4 /* StageStartEffect.cpp */; };
 		BA5488AD192567590023B390 /* ImageUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA5488AB192567590023B390 /* ImageUtil.cpp */; };
 		BA5488AE19256AAC0023B390 /* ImageUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA5488AB192567590023B390 /* ImageUtil.cpp */; };
 		BA5FD39E18F4980800EDAC79 /* InputManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA5FD39C18F4980800EDAC79 /* InputManager.cpp */; };
@@ -460,6 +462,8 @@
 		5BD0858D198F659200A48E08 /* windowB.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = windowB.mp3; sourceTree = "<group>"; };
 		5BD08596198F949800A48E08 /* shootingBlaze.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = shootingBlaze.wav; sourceTree = "<group>"; };
 		5BD08599198F94AA00A48E08 /* shootingBlaze.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shootingBlaze.png; sourceTree = "<group>"; };
+		5BD665A819ACEF9700C731A4 /* StageStartEffect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StageStartEffect.cpp; sourceTree = "<group>"; };
+		5BD665A919ACEF9700C731A4 /* StageStartEffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StageStartEffect.h; sourceTree = "<group>"; };
 		BA5488AB192567590023B390 /* ImageUtil.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImageUtil.cpp; sourceTree = "<group>"; };
 		BA5488AC192567590023B390 /* ImageUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageUtil.h; sourceTree = "<group>"; };
 		BA5FD39C18F4980800EDAC79 /* InputManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = InputManager.cpp; sourceTree = "<group>"; };
@@ -567,6 +571,8 @@
 			children = (
 				047E748819AB759F002B9FF8 /* PlayStage.cpp */,
 				047E748919AB759F002B9FF8 /* PlayStage.h */,
+				5BD665A819ACEF9700C731A4 /* StageStartEffect.cpp */,
+				5BD665A919ACEF9700C731A4 /* StageStartEffect.h */,
 				047E748619AB7519002B9FF8 /* stage1 */,
 			);
 			name = stage;
@@ -1233,6 +1239,7 @@
 				BA5488AD192567590023B390 /* ImageUtil.cpp in Sources */,
 				047E748F19AB7621002B9FF8 /* PlayStage1.cpp in Sources */,
 				5B36260219AA103500A6B3E0 /* Luna.cpp in Sources */,
+				5BD665AA19ACEF9700C731A4 /* StageStartEffect.cpp in Sources */,
 				5BCDA674199C864B00A59255 /* MessageWindow.cpp in Sources */,
 				1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */,
 				047E749E19ABAA9D002B9FF8 /* StandingLunaImage.cpp in Sources */,
@@ -1264,6 +1271,7 @@
 				5B36260319AA103500A6B3E0 /* Luna.cpp in Sources */,
 				5B7F21E919A4EBA600148ACA /* WindowState.cpp in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
+				5BD665AB19ACEF9700C731A4 /* StageStartEffect.cpp in Sources */,
 				5B36260819AAC01C00A6B3E0 /* LunaState.cpp in Sources */,
 				047E748B19AB759F002B9FF8 /* PlayStage.cpp in Sources */,
 				047E749A19AB83EF002B9FF8 /* TextureManager.cpp in Sources */,

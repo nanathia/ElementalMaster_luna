@@ -1,11 +1,3 @@
-//
-//  PlayStage.cpp
-//  Stg14
-//
-//  Created by 小林　伸 on 2014/08/25.
-//
-//
-
 #include "PlayStage.h"
 #include "PlayStage1.h"
 

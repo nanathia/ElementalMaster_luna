@@ -1,11 +1,3 @@
-//
-//  PlayStage1State.h
-//  Stg14
-//
-//  Created by 小林　伸 on 2014/08/25.
-//
-//
-
 #ifndef __Stg14__PlayStage1State__
 #define __Stg14__PlayStage1State__
 
@@ -13,6 +5,7 @@
 
 class StandingLunaImage;
 class WindowConsole;
+class StageStartEffect;
 
 namespace stage1{
     
@@ -27,8 +20,17 @@ namespace stage1{
         virtual ~StateChild();
         virtual StateChild* update(float deltaTime) = 0;
     };
-    
-    // 最初にルナちゃんが喋るシーン
+	
+	// ステージ開始 レディー？シーン
+    class ReadyScene: public StateChild{
+		StageStartEffect* m_startEffect;
+    public:
+        ReadyScene(PlayStage1* user);
+        ~ReadyScene();
+        StateChild* update(float deltaTime) override;
+    };
+	
+	// 最初にルナちゃんが喋るシーン
     class SpeakScene1: public StateChild{
         StandingLunaImage* m_Tatie;
         WindowConsole* m_messageWindow;
@@ -37,6 +39,9 @@ namespace stage1{
         ~SpeakScene1();
         StateChild* update(float deltaTime) override;
     };
+	
+	
+
     
     // 落下を開始する前に、自由に動けるシーン
     class FirstFreeMove_Scene: public StateChild{
