@@ -1,11 +1,3 @@
-//
-//  PlayStage.h
-//  Stg14
-//
-//  Created by 小林　伸 on 2014/08/25.
-//
-//
-
 #ifndef __Stg14__PlayStage__
 #define __Stg14__PlayStage__
 

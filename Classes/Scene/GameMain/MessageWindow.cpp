@@ -2,6 +2,7 @@
 #include "GameMain.h"
 #include "Constants.h"
 #include "ImageUtil.h"
+#include "StandingLunaImage.h"
 #include "InputManager.h"
 #include "SimpleAudioEngine.h"
 #include "WindowState.h"
@@ -10,7 +11,7 @@
 using namespace std;
 using namespace CocosDenshion;
 
-// ウィンドウ総合クラス。
+// ウィンドウ総合クラス・ｗ・
 #pragma mark --- ウィンドウ総合 ---
 
 // ウィンドウコンソール、コンストラクタでメッセージウィンドウ２種、インスタンスを生成
@@ -273,7 +274,7 @@ m_point(point)
         character[2] = str.c_str()[i+2];
         character[3] = '\0';
 		
-		if(strcmp(character,"嬲")==0)
+		if(strcmp(character,"嬲") == 0)
 		{
 			y ++;
 			x = 0;
@@ -285,7 +286,7 @@ m_point(point)
         x++;
         CChar* new_c = new CChar(character, pos);
         if(i != 0){
-            // .back() っていうのは一番後ろって意味よー。
+
             m_characters.back()->setNext(new_c);
             new_c->setPrev(m_characters.back());
 		}

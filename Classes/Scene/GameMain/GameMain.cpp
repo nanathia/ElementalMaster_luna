@@ -108,11 +108,13 @@ bool GameMain::initGame()
     m_TexMan->add("push.png", texName_PushCKey);
     m_currentScene = new PlayStage(this);
     m_Luna = new CPlayerLuna;
+	// 画面サイズを取得
     cocos2d::Size winSize = cocos2d::Director::getInstance()->getWinSize();
     m_Menu = m_TexMan->createSprite(texName_Menu, this,
                                     cocos2d::Rect(winSize.width/2, winSize.height/2, winSize.width, winSize.height));
     m_Menu->setVisible(false);
-    m_StatusUi = m_TexMan->createSprite(texName_StatusUI, this, cocos2d::Rect(270, 650, 500, 100));
+    // マネージャーからUIを呼び出し！
+	m_StatusUi = m_TexMan->createSprite(texName_StatusUI, this, cocos2d::Rect(270, 650, 500, 100));
     return true;
 }
 
